@@ -1,0 +1,63 @@
+{
+ "version": "1.0.0",
+ "generated_by": "tools/web/stage_pages.py",
+ "files": [
+  {
+   "path": "index.apple-touch-icon.png",
+   "size": 58773,
+   "sha256": "D2E22E8AE6401CF07253E1FABA1BBE615D967380AFBB1C2AAAE63F65B122836F",
+   "chunks": []
+  },
+  {
+   "path": "index.audio.position.worklet.js",
+   "size": 2973,
+   "sha256": "BE33985BC7160D6BF9646F259CD86B259CD67B02CCB297EE5C44F8AC84327BC8",
+   "chunks": []
+  },
+  {
+   "path": "index.audio.worklet.js",
+   "size": 7298,
+   "sha256": "5B476A9C9CE642C0EE4256436D1BC31D9C38F868ACA0F9A8E2A57C18D2DEC2A3",
+   "chunks": []
+  },
+  {
+   "path": "index.html",
+   "size": 5453,
+   "sha256": "B04CB819F351265F35CA4ECF8C14C1EC1586A1132623A63E5E96453A5EFC50F6",
+   "chunks": []
+  },
+  {
+   "path": "index.icon.png",
+   "size": 1140554,
+   "sha256": "CCEF3C9A3860475130415B99A5BEC8E8EE58FC6D7DE707849CDABAC8F387A557",
+   "chunks": []
+  },
+  {
+   "path": "index.js",
+   "size": 279815,
+   "sha256": "68586D6DAAFC93C6E697B3FB258976874AA7459B8931165EBB1DC3C9614CC42C",
+   "chunks": []
+  },
+  {
+   "path": "index.pck",
+   "size": 164765972,
+   "sha256": "C9D9C553FD11D2BB4109DF7F30599F317AFB9534B056EB4B461CB45B9756D764",
+   "chunks": [
+    "index.pck.part01",
+    "index.pck.part02"
+   ]
+  },
+  {
+   "path": "index.png",
+   "size": 21443,
+   "sha256": "3CB4495C0B98DFBE4B663CBF2B6836473572339BEB66D902367893162A70BE0E",
+   "chunks": []
+  },
+  {
+   "path": "index.wasm",
+   "size": 39509339,
+   "sha256": "7EDA98958EB09135A1ACB54A4323A00B1A55AF1997F15FA1CDC2B93E3DF46656",
+   "chunks": []
+  }
+ ]
+}

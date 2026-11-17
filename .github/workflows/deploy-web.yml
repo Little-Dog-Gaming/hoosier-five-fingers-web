@@ -1,0 +1,53 @@
+name: deploy-web
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "site/**"
+      - ".github/workflows/deploy-web.yml"
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Reassemble the PCK from its chunks and verify SHA-256
+        working-directory: site
+        run: python3 reassemble.py
+
+      - name: Confirm the site tree
+        working-directory: site
+        run: |
+          ls -lh
+          test -f index.html
+          test -f index.pck
+          test -f index.wasm
+          test -z "$(ls index.pck.part* 2>/dev/null)" || (echo "leftover chunks" && exit 1)
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
